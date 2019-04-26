@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-注册失败!账号已存在！
+注册失败!账号已存在！哈哈哈哈
 </body>
 </html>
