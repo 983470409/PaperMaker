@@ -50,6 +50,7 @@ public class UserController {
         mv.addObject("user",user);
         mv.setView(new MappingJackson2JsonView());
 
+
         return mv;
     }
 
