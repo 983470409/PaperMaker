@@ -43,7 +43,7 @@ public class UserController {
     public ModelAndView test(){
 
         ModelAndView mv = new ModelAndView();
-        String account = "张";
+        String account = "张a";
 
         UserEntity user = userService.getUserByAcc(account);
 
