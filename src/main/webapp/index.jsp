@@ -7,7 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
+
+
 <body class="landing is-preload">
+<script src="assets/js/jquery.min.js"></script>
+<script>
+    $(document).ready(function (){
+        $("#scroll").click(function (){
+            $('html, body').animate({
+                scrollTop: $("#div1").offset().top
+            }, 2000);
+        });
+    });
+</script>
 <div id="page-wrapper">
 
     <!-- Header -->
@@ -35,7 +47,7 @@
                     </ul>
                 </li>
                 <li><a href="#" class="button">登录</a></li>
-                <li><a href="#" class="button">注册</a></li>
+                <li><a href="#register" class="button" id="scroll">注册</a></li>
             </ul>
         </nav>
     </header>
@@ -56,49 +68,23 @@
             <header class="major">
                 <h2>Introducing the ultimate mobile app
                     <br />
-                    for doing stuff with your phone</h2>
-                <p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
-                    adipiscing nunc adipiscing. Condimentum turpis massa.</p>
+                    for using to make test papers online</h2>
+                <p>Tips： 当你使用试卷星系统时，您可以使用如下的功能</p>
             </header>
 
         </section>
 
-        <section class="box special features">
-            <div class="features-row">
-                <section>
-                    <span class="icon major fa-bolt accent2"></span>
-                    <h3>Magna etiam</h3>
-                    <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-                </section>
-                <section>
-                    <span class="icon major fa-area-chart accent3"></span>
-                    <h3>Ipsum dolor</h3>
-                    <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-                </section>
-            </div>
-            <div class="features-row">
-                <section>
-                    <span class="icon major fa-cloud accent4"></span>
-                    <h3>Sed feugiat</h3>
-                    <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-                </section>
-                <section>
-                    <span class="icon major fa-lock accent5"></span>
-                    <h3>Enim phasellus</h3>
-                    <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-                </section>
-            </div>
-        </section>
+
 
         <div class="row">
             <div class="col-6 col-12-narrower">
 
                 <section class="box special">
                     <span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
-                    <h3>Sed lorem adipiscing</h3>
-                    <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+                    <h3>试 卷 资 源 搜 索</h3>
+                    <p>在该板块当中，您不仅仅可以搜索您所需要的资源，还可以分享您的资源供他人使用并赚取积分，并用积分下载资源</p>
                     <ul class="actions special">
-                        <li><a href="#" class="button alt">Learn More</a></li>
+                        <li><a href="#" class="button alt">开始搜索</a></li>
                     </ul>
                 </section>
 
@@ -107,10 +93,10 @@
 
                 <section class="box special">
                     <span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
-                    <h3>Accumsan integer</h3>
-                    <p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+                    <h3>智 能 制 作 试 卷</h3>
+                    <p>在该模块当中，您可以选择套用模板，本地试卷资源，自主选择等途径进行试卷的制作，并可供下载、分享</p>
                     <ul class="actions special">
-                        <li><a href="#" class="button alt">Learn More</a></li>
+                        <li><a href="#" class="button alt">开始制作</a></li>
                     </ul>
                 </section>
 
@@ -119,7 +105,8 @@
 
     </section>
 
-    <!-- CTA -->
+    <!-- 注册-->
+    <a name="register" id="div1"/><!-- 注册的锚点 -->
     <section id="cta">
 
         <h2>注册</h2>
@@ -127,10 +114,24 @@
 
         <form>
             <div class="row gtr-50 gtr-uniform">
-                <div class="col-8 col-12-mobilep" style="text-align: center">
+                <div class="col-12 col-12-mobilep" style="text-align: center">
                     <input type="text" name="account" id="account" placeholder="Account" style="margin-bottom: 17px"/>
                     <input type="password" name="password" id="password" placeholder="Password" style="margin-bottom: 17px"/>
                     <input type="password" name="rePassword" id="rePassword" placeholder="rePassword" style="margin-bottom: 17px"/>
+                    <input type="text" name="age" id="age" placeholder="Age" style="margin-bottom: 17px"/>
+                    <select  name="sex" style="margin-bottom: 17px">
+                        <option selected = "selected">男</option>
+                        <option >女</option>
+                    </select>
+                    <select  name="education" style="margin-bottom: 17px">
+                        <option selected = "selected">小学</option>
+                        <option >初中</option>
+                        <option >高中</option>
+                        <option >大专</option>
+                        <option >本科</option>
+                        <option >硕士</option>
+                        <option >博士</option>
+                    </select>
                 </div>
             </div>
 
@@ -143,16 +144,15 @@
 
     <!-- Footer -->
     <footer id="footer">
-
         <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li><li>Design: 长沙学院：张豫湘</li>
+            <li>Design By 长沙学院：张豫湘</li>
         </ul>
     </footer>
 
 </div>
 
 <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
+
 <script src="assets/js/jquery.dropotron.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
