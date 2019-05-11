@@ -13,18 +13,24 @@
 <script src="assets/js/jquery.min.js"></script>
 <script>
     $(document).ready(function (){
+
+
         $("#scroll").click(function (){
             $('html, body').animate({
                 scrollTop: $("#div1").offset().top
             }, 2000);
         });
+
+        $('#banner').hide().fadeIn(1000);
+        $('#main').hide().fadeIn(2000);
+
     });
 </script>
 <div id="page-wrapper">
 
     <!-- Header -->
     <header id="header" class="alt">
-        <h1><a href="index.html">PaperStar</a> by 张豫湘</h1>
+        <h1><a href="index.jsp">PaperStar</a> by 张豫湘</h1>
         <nav id="nav">
             <ul>
                 <li><a href="index.jsp">Home</a></li>
@@ -46,7 +52,7 @@
 
                     </ul>
                 </li>
-                <li><a href="#" class="button">登录</a></li>
+                <li><a href="login.jsp" class="button">登录</a></li>
                 <li><a href="#register" class="button" id="scroll">注册</a></li>
             </ul>
         </nav>
@@ -57,7 +63,7 @@
         <h2>Paper  Star</h2>
         <p>一款专注于在线辅助制作试卷的网站</p>
         <ul class="actions special">
-            <li><a href="#" class="button">免费制作试卷</a></li>
+            <li><a href="makePaperChoice.jsp" class="button">免费制作试卷</a></li>
         </ul>
     </section>
 
@@ -66,7 +72,7 @@
 
         <section class="box special">
             <header class="major">
-                <h2>Introducing the ultimate mobile app
+                <h2>Introducing the ultimate Web app
                     <br />
                     for using to make test papers online</h2>
                 <p>Tips： 当你使用试卷星系统时，您可以使用如下的功能</p>
@@ -96,7 +102,7 @@
                     <h3>智 能 制 作 试 卷</h3>
                     <p>在该模块当中，您可以选择套用模板，本地试卷资源，自主选择等途径进行试卷的制作，并可供下载、分享</p>
                     <ul class="actions special">
-                        <li><a href="#" class="button alt">开始制作</a></li>
+                        <li><a href="makePaperChoice.jsp" class="button alt">开始制作</a></li>
                     </ul>
                 </section>
 
@@ -159,6 +165,11 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-
+<script>
+    if ('addEventListener' in window) {
+        window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+</script>
 </body>
 </html>

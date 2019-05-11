@@ -32,6 +32,8 @@ public class UserController {
 
         if(userService.registered(user) != -1)
             mv.setViewName("success");
+        else
+            mv.setViewName("error");
 
         return mv;
 
