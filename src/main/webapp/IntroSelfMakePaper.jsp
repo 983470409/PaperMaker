@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
+
 <body class="is-preload">
 <div id="page-wrapper">
 
@@ -43,23 +44,35 @@
     <section id="main" class="container">
         <header>
             <h2>自主设计模板</h2>
-            <p>在这里你可以依据您的个人需求对试卷进行设计.</p>
+            <p>在这里你可以依据您的个人需求对试卷进行设计</p>
         </header>
         <div class="box">
-            <span class="image featured"><img src="images/testDesign.jpg" alt="" /></span>
-            <h3>This is a subheading</h3>
-            <p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
-            <div class="row">
+            <span class="image featured"><img src="images/testDesign.jpg" alt="" style="height: 500px" /></span>
+
+            <form>
+            <div class="row" >
+
                 <div class="row-6 row-12-mobilep">
-                    <h3>And now a subheading</h3>
+                    <h3>第一步：试卷基本信息填写</h3>
+
+                    <div>
+                       <p>试卷名称：</p> <input type="text" name="paperName">
+                        <p>试卷名称：</p> <input type="text" name="paperName1">
+                    </div>
+
+                </div>
+
+                <div class="row-6 row-12-mobilep">
+                    <h3>第二步：试卷主体内容选择</h3>
                     <p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
                 </div>
-                <div class="row-6 row-12-mobilep">
-                    <h3>And another subheading</h3>
-                    <p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
-                </div>
+
+
+
             </div>
+            </form>
         </div>
+
     </section>
 
     <!-- Footer -->
