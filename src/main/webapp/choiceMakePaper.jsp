@@ -13,7 +13,19 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
+
 <body class="is-preload">
+
+<script src="assets/js/jquery.min.js"></script>
+<script>
+    $(function() {
+        $('.col-12-narrower').hide(1);
+        $('.col-12-narrower').fadeIn(500);
+    });
+
+</script>
+
+
 <div id="page-wrapper">
 
     <!-- Header -->
@@ -55,7 +67,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <h3>选择模板制作</h3>
                 <p>在该板块当中，您可以使用本站所提供的试卷模板制作试卷</p>
                 <ul class="actions special">
-                    <li><a href="#" class="button alt">开始制作</a></li>
+                    <li><a href="paperResource/selfMakePaper.jsp" class="button alt">开始制作</a></li>
                 </ul>
             </section>
 
@@ -98,19 +110,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 </div>
 
 <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
+
 <script src="assets/js/jquery.dropotron.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-<script>
-    $(function() {
-        $('.col-12-narrower').hide(1);
-        $('.col-12-narrower').fadeIn(500);
-    });
 
-</script>
 </body>
 </html>
