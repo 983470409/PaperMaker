@@ -40,12 +40,6 @@
       <version>1.2</version>
     </dependency>
 
-    <!--阿里json包-->
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-      <version>1.2.7</version>
-    </dependency>
 
     <!--jdbc连接池-->
     <dependency>

@@ -1,25 +1,27 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8"  language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 <body>
-<script src="assets/js/jquery.min.js"></script>
-
-
-
+<script src="/assets/js/jquery.min.js"></script>
 <!-- Header -->
 <header id="header" class="alt">
+    dsada
     <h1><a href="index.jsp">PaperStar</a> by 张豫湘</h1>
     <nav id="nav">
+
         <ul>
-            <li><a href="index.jsp">Home</a></li>
+            <c:choose>
+            <c:when test="${sessionScope.account != null }">
             <li>
-                <a href="#" class="icon fa-angle-down">用户</a>
+                用户:<a href="#" class="icon fa-angle-down">${sessionScope.account}</a>
                 <ul>
-                    <li><a href="generic.html">1</a></li>
-                    <li><a href="contact.html">2</a></li>
-                    <li><a href="elements.html">3</a></li>
+                    <li><a href="#">个人中心</a></li>
+                    <li><a href="#">修改密码</a></li>
+                    <li><a href="UserController/logout.do">注销</a></li>
+                    <!--
                     <li>
                         <a href="#">4</a>
                         <ul>
@@ -29,20 +31,20 @@
                             <li><a href="#">Option Four</a></li>
                         </ul>
                     </li>
-
+                    -->
                 </ul>
             </li>
-            <li><a href="login.jsp" class="button">登录</a></li>
+            </c:when>
+            <c:otherwise>
+            <li><a href="/login.jsp" class="button">登录</a></li>
             <li><a href="#register" class="button" id="scroll">注册</a></li>
+            </c:otherwise>
+            </c:choose>
         </ul>
+
     </nav>
+
 </header>
 
-<script src="assets/js/jquery.dropotron.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
 </body>
 </html>

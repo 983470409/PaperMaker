@@ -5,12 +5,12 @@
     <title>Paper Star</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
 </head>
 
 
 <body class="landing is-preload">
-<script src="assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
 
@@ -35,7 +35,7 @@
         <h2>Paper Star</h2>
         <p>一款专注于在线辅助制作试卷的网站</p>
         <ul class="actions special">
-            <li><a href="choiceMakePaper.jsp" class="button">免费制作试卷</a></li>
+            <li><a href="/choiceMakePaper.jsp" class="button">免费制作试卷</a></li>
         </ul>
     </section>
 
@@ -57,7 +57,7 @@
             <div class="col-6 col-12-narrower">
 
                 <section class="box special">
-                    <span class="image featured"><img src="images/pic02.jpg" alt=""/></span>
+                    <span class="image featured"><img src="/images/pic02.jpg" alt=""/></span>
                     <h3>试 卷 资 源 搜 索</h3>
                     <p>在该板块当中，您不仅仅可以搜索您所需要的资源，还可以分享您的资源供他人使用并赚取积分，并用积分下载资源</p>
                     <ul class="actions special">
@@ -69,11 +69,11 @@
             <div class="col-6 col-12-narrower">
 
                 <section class="box special">
-                    <span class="image featured"><img src="images/pic03.jpg" alt=""/></span>
+                    <span class="image featured"><img src="/images/pic03.jpg" alt=""/></span>
                     <h3>智 能 制 作 试 卷</h3>
                     <p>在该模块当中，您可以选择套用模板，本地试卷资源，自主选择等途径进行试卷的制作，并可供下载、分享</p>
                     <ul class="actions special">
-                        <li><a href="choiceMakePaper.jsp" class="button alt">开始制作</a></li>
+                        <li><a href="/choiceMakePaper.jsp" class="button alt">开始制作</a></li>
                     </ul>
                 </section>
 
@@ -132,16 +132,17 @@
 
 <!-- Scripts -->
 
-<script src="assets/js/jquery.dropotron.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/jquery.dropotron.min.js"></script>
+<script src="/assets/js/jquery.scrollex.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
 <script type="text/javascript">
 
     $(function () {
-
+        $.sessionId
+        <!-- 登录 -->
         $('.fit').click(function () {
 
                 var account = $("#regForm input")[0].value;
@@ -168,16 +169,20 @@
                     'password': password,
                     'sex': sex,
                     'age': age,
-                    'eduExp': eduExp
+                    'eduExp': eduExp,
+                    'status': 1
                 }
                 $.ajax({
-                        url: './UserController/registered',
-                        type: 'post',
-                        data : JSON.stringify(data),
-                        contentType : "application/json",
+                url: 'UserController/registered.do',
+                type: 'post',
+                data : JSON.stringify(data),
+                contentType : "application/json",
 
                 success:function (result) {
-                    alert(result);
+                    if(result == 1)
+                        alert('注册成功');
+                    else
+                        alert('注册失败！账号已存在');
                 }
 
 

@@ -22,7 +22,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserEntity getUserByAcc(String account) {
+    public UserEntity login(String account) {
+
         return userDao.findUserByAcc(account);
     }
 

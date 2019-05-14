@@ -4,12 +4,55 @@
     <title>Paper Star</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/login.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="/assets/css/login.css" />
+    <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 </head>
 
 <body class="is-preload">
+<script src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript">
 
+    $(function () {
+
+        $(".button").click( function () {
+            var account = $("#account").val();
+            var password = $("#password").val();
+
+            if(account == ""){
+                alert("账号不能为空");
+                return false;
+            }else if(password == ""){
+                alert("密码不能为空");
+                return false;
+            }
+
+            $.ajax({
+                url: 'UserController/login.do',
+                type: 'post',
+                data : {
+                    'account' : account,
+                    'password' : password
+                },
+                
+                success:function (result) {
+                    if(result == 0){
+                        alert('账号不存在!');
+                    }else if(result == 1){
+                        alert('密码错误！');
+                    }else if(result == 2){
+                        window.location = "./index.jsp"
+                    }
+                }
+            })
+
+            }
+        )
+
+
+    })
+
+
+</script>
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -23,7 +66,7 @@
 
 
         <hr />
-        <form method="post" action="#">
+        <form method="post">
             <div class="fields">
                 <div class="field">
                     <input type="text" name="account" id="account" placeholder="Account" />
@@ -55,7 +98,7 @@
             </div>
 
             <ul class="actions special">
-                <li><a href="#" class="button">登 录</a></li>
+                <li><a href="#" class="button" >登 录</a></li>
             </ul>
         </form>
         <hr />
