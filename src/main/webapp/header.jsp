@@ -8,7 +8,7 @@
 <script src="/assets/js/jquery.min.js"></script>
 <!-- Header -->
 <header id="header" class="alt">
-    dsada
+
     <h1><a href="index.jsp">PaperStar</a> by 张豫湘</h1>
     <nav id="nav">
 
@@ -20,7 +20,7 @@
                 <ul>
                     <li><a href="#">个人中心</a></li>
                     <li><a href="#">修改密码</a></li>
-                    <li><a href="UserController/logout.do">注销</a></li>
+                    <li><a href="/UserController/logout.do">注销</a></li>
                     <!--
                     <li>
                         <a href="#">4</a>

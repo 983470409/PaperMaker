@@ -1,0 +1,15 @@
+.box {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 0 0 #e5e5e5;
+    margin: 0 0 2em 0;
+    padding: 3em;
+}
+
+.toolsbar {
+    height: 660px;
+    width: 300px;
+    background: white;
+    margin-right: 25px;
+    padding: 15px 0 40px;
+}

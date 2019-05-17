@@ -11,10 +11,10 @@ em, i { font-style: normal; }
 .dcwj_table { border-top: 1px solid #ccc; border-right: 1px solid #ccc; }
 .dcwj_table td { border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; height: 32px; padding: 0 5px; font-size: 12px; }
 .dcwj_table .td_title { text-align: center; }
-.title_wjht { font-weight: 400; 
-font-size: 16px;
-padding: 5px 0 15px 0;
-color: #666;
+.title_wjht { font-weight: 400;
+ font-size: 16px;
+ padding: 5px 0 15px 0;
+ color: #666;
 }
 .qt_box { height: auto; overflow: hidden; }
 .qt_box .qtwenz { float: left; }
@@ -73,10 +73,9 @@ a.zjxx { display: block; background: url(../images/jiajia.png) no-repeat left; h
 
 
 /**/
-.movie_box{ position:relative; z-index:8; border: 1px solid #fff; padding:0 5px;} 
+.movie_box{ position:relative; z-index:8; border: 1px solid #fff; padding:0 5px;margin: 25px}
 .kzqy_czbut{ text-align:right;position:absolute; top:5px; right:5px;}
 .kzqy_czbut a{ display:inline-block; font-size:12px; padding:4px 10px; background:#0099ff; color:#fff; margin-left:5px;  }
  .hide{ display:none;}
  
  .dx_box{ display:none; padding: 20px; background: #f2f2f2; }
- 

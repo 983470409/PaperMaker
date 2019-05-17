@@ -25,27 +25,34 @@
                 <div class="row">
 
                     <div class="row-12 row-12-mobilep" style="width: 100%">
-                        <h3>第一步：试卷基本信息填写</h3>
+                        <h3 style="font-weight: bold ">试卷基本信息填写  &nbsp;: </h3>
 
-                        <div>
+                        <div style="margin-left: 25px">
                             <div style="width: 100%">
-                                <b>试卷名称：</b> <textarea name="papername" style="font-size: 30px">&lt学校&gt&lt学校&gt&ltXX考试&gt&ltXX试题&gt</textarea>
+                                <b>试卷标题：</b> <textarea name="papername" style="font-size: 30px">&lt学校&gt&lt学校&gt&ltXX考试&gt&ltXX试题&gt</textarea>
                                 </br>
 
-                                <b>卷头：</b> <input type="text" name="paperhead" value="班级：____________姓名：____________学号：____________得分：____________"
-                                                         style="height: 2em">
+                                <b>卷头：</b> <input type="text" name="paperheader" value="班级：____________姓名：____________学号：____________得分：____________"
+                                                         style="height: 2em;margin-bottom: 10px">
 
                             </div>
 
                             <div>
 
                                 <div style="width: 30%">
+                                    <b>页眉：</b> <input type="text" name="pageheader" value="<学校><学期><XX考试>"
+                                                      style="height: 2em;margin-bottom: 10px">
 
+                                    <b>页脚：</b> <input type="text" name="pageheader" value="<XX试题>"
+                                                      style="height: 2em;margin-bottom: 10px">
                                 </div>
                                 <div style="width: 70%">
-
+                                    <b>试卷说明：</b> <textarea name="paperIntro" style="font-size: 17px">注意事项：
+                                    1.全卷共XX分，考试时间XX分钟。
+                                    2.考生必须将报考学校、姓名、准考证号、考场、座位号等个人信息填(涂)写在答题卡 的相应位置上。
+                                    3.考生务必将答案直接填(涂)写在答题卡的相应位置上。</textarea>
                                 </div>
-
+                                </br></br>
                             </div>
 
 
@@ -53,8 +60,11 @@
 
                     </div>
 
+
                     <div class="row-6 row-12-mobilep">
-                        <h3>第二步：试卷主体内容选择</h3>
+                        <ul class="actions special" style="margin-left: 252px">
+                            <li><a href="paperResource/selfMakePaper.jsp" class="button special">开始制作</a></li>
+                        </ul>
 
                     </div>
 
